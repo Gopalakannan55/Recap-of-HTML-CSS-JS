@@ -1,0 +1,121 @@
+body {
+  font-family: Arial;
+  margin: 20px;
+  line-height: 1.5;
+}
+
+h1 {
+  text-align: center;
+  color: darkblue;
+}
+
+/* 1. Text & Font */
+.text-style p {
+  color: #333;
+  font-size: 18px;
+}
+.text-style span {
+  color: crimson;
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+/* 2. Box Model */
+.box {
+  margin: 20px;
+  padding: 15px;
+  border: 2px solid black;
+  background: #f9f9f9;
+  width: 200px;
+}
+
+/* 3. Display */
+.inline-box {
+  display: inline;
+  background: lightblue;
+  padding: 5px;
+}
+.block-box {
+  display: block;
+  background: lightcoral;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+/* 4. Position */
+.positioning {
+  position: relative;
+  height: 100px;
+  background: #eee;
+  margin-bottom: 40px;
+}
+.relative-box {
+  position: relative;
+  top: 10px;
+  left: 20px;
+  background: #add8e6;
+  padding: 10px;
+}
+.absolute-box {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  background: #ffa07a;
+  padding: 10px;
+}
+
+/* 5. Flexbox */
+.flex-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  background: #d0f0c0;
+  padding: 10px;
+}
+.flex-container div {
+  background: #6fcf97;
+  padding: 20px;
+  width: 50px;
+  text-align: center;
+}
+
+/* 6. Grid */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  background: #f5deb3;
+  padding: 10px;
+}
+.grid-container div {
+  background: #deb887;
+  padding: 20px;
+  text-align: center;
+}
+
+/* 7. Background */
+.bg-box {
+  background-color: #b0e0e6;
+  padding: 20px;
+  text-align: center;
+}
+
+/* 8. Hover & Transition */
+.btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  transition: background 0.3s ease;
+}
+.btn:hover {
+  background: #0056b3;
+}
+
+/* 9. Media Query */
+@media (max-width: 600px) {
+  body {
+    background-color: #ffe4e1;
+  }
+}
