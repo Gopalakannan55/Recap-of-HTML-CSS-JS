@@ -122,3 +122,71 @@ console.log(moreNums);
 let updatedPerson = { ...person, city: "NY" };
 console.log(updatedPerson);
 
+// 10. Arrays
+let numbers = [1, 2, 3];
+numbers.push(4);
+numbers.pop();
+numbers.shift();
+numbers.unshift(0);
+console.log(numbers);
+
+// Array Methods
+console.log(numbers.length);
+console.log(numbers.includes(2));
+console.log(numbers.indexOf(2));
+console.log(numbers.join("-"));
+console.log(numbers.map(n => n * 2));
+console.log(numbers.filter(n => n > 1));
+console.log(numbers.find(n => n > 1));
+numbers.forEach(n => console.log("Each:", n));
+
+// 11. Objects
+let car = {
+  brand: "Toyota",
+  model: "Corolla",
+  start: function() {
+    return "Car started";
+  }
+};
+console.log(car.brand);
+console.log(car["model"]);
+console.log(car.start());
+
+// Object Methods
+console.log(Object.keys(car));
+console.log(Object.values(car));
+console.log(Object.entries(car));
+
+// 12. String Methods
+let text = "JavaScript is Fun";
+console.log(text.length);
+console.log(text.toUpperCase());
+console.log(text.toLowerCase());
+console.log(text.slice(0, 10));
+console.log(text.substring(0, 10));
+console.log(text.replace("Fun", "Awesome"));
+console.log(text.includes("Java"));
+console.log(text.split(" "));
+
+// 13. Date & Time
+let now = new Date();
+console.log(now.toDateString());
+console.log(now.getFullYear());
+console.log(now.getMonth());
+console.log(now.getDate());
+console.log(now.getDay());
+console.log(now.getHours());
+console.log(now.toLocaleString());
+
+// 14. Math Methods
+console.log(Math.PI);
+console.log(Math.round(4.6));
+console.log(Math.ceil(4.1));
+console.log(Math.floor(4.9));
+console.log(Math.max(3, 6, 9));
+console.log(Math.min(3, 6, 9));
+console.log(Math.random());
+console.log(Math.floor(Math.random() * 10));
+console.log(Math.sqrt(16));
+console.log(Math.pow(2, 3));
+
