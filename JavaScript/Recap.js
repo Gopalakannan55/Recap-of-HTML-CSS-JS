@@ -123,34 +123,34 @@ let updatedPerson = { ...person, city: "NY" };
 console.log(updatedPerson);
 
 // 10. Arrays
-let numbers = [1, 2, 3];
-numbers.push(4);
-numbers.pop();
-numbers.shift();
-numbers.unshift(0);
-console.log(numbers);
+let num= [1, 2, 3];
+num.push(4);
+num.pop();
+num.shift();
+num.unshift(0);
+console.log(num);
 
 // Array Methods
-console.log(numbers.length);
-console.log(numbers.includes(2));
-console.log(numbers.indexOf(2));
-console.log(numbers.join("-"));
-console.log(numbers.map(n => n * 2));
-console.log(numbers.filter(n => n > 1));
-console.log(numbers.find(n => n > 1));
+console.log(num.length);
+console.log(num.includes(2));
+console.log(num.indexOf(2));
+console.log(num.join("-"));
+console.log(num.map(n => n * 2));
+console.log(num.filter(n => n > 1));
+console.log(num.find(n => n > 1));
 numbers.forEach(n => console.log("Each:", n));
 
-// 11. Objects
-let car = {
+// Objects
+let car1 = {
   brand: "Toyota",
   model: "Corolla",
   start: function() {
     return "Car started";
   }
 };
-console.log(car.brand);
-console.log(car["model"]);
-console.log(car.start());
+console.log(car1.brand);
+console.log(car1["model"]);
+console.log(car1.start());
 
 // Object Methods
 console.log(Object.keys(car));
@@ -158,25 +158,25 @@ console.log(Object.values(car));
 console.log(Object.entries(car));
 
 // 12. String Methods
-let text = "JavaScript is Fun";
-console.log(text.length);
-console.log(text.toUpperCase());
-console.log(text.toLowerCase());
-console.log(text.slice(0, 10));
-console.log(text.substring(0, 10));
-console.log(text.replace("Fun", "Awesome"));
-console.log(text.includes("Java"));
-console.log(text.split(" "));
+let text1 = "JavaScript is Fun";
+console.log(text1.length);
+console.log(text1.toUpperCase());
+console.log(text1.toLowerCase());
+console.log(text1.slice(0, 10));
+console.log(text1.substring(0, 10));
+console.log(text1.replace("Fun", "Awesome"));
+console.log(text1.includes("Java"));
+console.log(text1.split(" "));
 
 // 13. Date & Time
-let now = new Date();
-console.log(now.toDateString());
-console.log(now.getFullYear());
-console.log(now.getMonth());
-console.log(now.getDate());
-console.log(now.getDay());
-console.log(now.getHours());
-console.log(now.toLocaleString());
+let now1 = new Date();
+console.log(now1.toDateString());
+console.log(now1.getFullYear());
+console.log(now1.getMonth());
+console.log(now1.getDate());
+console.log(now1.getDay());
+console.log(now1.getHours());
+console.log(now1.toLocaleString());
 
 // 14. Math Methods
 console.log(Math.PI);
@@ -190,3 +190,42 @@ console.log(Math.floor(Math.random() * 10));
 console.log(Math.sqrt(16));
 console.log(Math.pow(2, 3));
 
+
+// js DOM
+// Select Elements
+const heading = document.getElementById("heading"); 
+const para= document.getElementsByClassName("para"); 
+const Divs = document.getElementsByTagName("div"); 
+const fButton = document.querySelector("button"); 
+const aButtons = document.querySelectorAll("button"); 
+
+//  Modifying Content
+const title = document.getElementById("title"); 
+title.textContent = "Updated Title";
+title.innerHTML = "<em>Italic Title</em>";
+
+// Chang Styles
+const box = document.getElementById("box"); 
+box.style.backgroundColor = "skyblue";
+box.style.padding = "20px";
+box.style.borderRadius = "8px";
+
+// Add/Remove Classes
+box.classList.add("highlight"); 
+box.classList.remove("hidden"); 
+box.classList.toggle("dark-theme"); 
+
+// Handl Events
+const btn = document.getElementById("clickBtn");
+btn.addEventListener("click", function () {
+  alert("Button Clicked!");
+});
+
+// Creat and Append Elements
+const newPara = document.createElement("p");
+newPara.textContent = "This is a new paragraph";
+document.body.appendChild(newPara);
+
+// Remove Elements
+const toRemove = document.getElementById("removeMe"); 
+toRemove.remove();
